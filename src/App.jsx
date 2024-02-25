@@ -23,6 +23,7 @@ function App() {
   }
   return (
     <>
+      {isSubmitting && <div>Lodding...</div>}
         <div className="container">
           <form action="" onSubmit={handleSubmit(onSubmit)}>
             <input placeholder='username' {...register("username", { required:{value:true, message:" Good"}, minLength:{value:3, message:"MinLength is 3"}, maxLength:{value:8, message:"MaxLength is 8"} })} type="text" name="username" id="" />
